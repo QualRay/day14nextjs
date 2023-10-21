@@ -1,35 +1,36 @@
 import React from 'react';
 import Link from "next/link";
+import { APP_NAME } from '../../Helper/helper';
 
 function Header() {
     return (
         <>
             <header id="header" className="header fixed-top d-flex align-items-center">
                 <div className="d-flex align-items-center justify-content-between">
-                    <a href="index.html" className="logo d-flex align-items-center">
-                        <img src="assets/img/logo.png" alt="true" />
-                        <span className="d-none d-lg-block">NiceAdmin</span>
-                    </a>
+                    <Link href="/" className="logo d-flex align-items-center">
+                        <img src="../assets/img/logo.png" alt="true" />
+                        <span className="d-none d-lg-block">{APP_NAME}</span>
+                    </Link>
                     <i className="bi bi-list toggle-sidebar-btn" />
-                </div>{/* End Logo */}
+                </div>
                 <div className="search-bar">
                     <form className="search-form d-flex align-items-center" method="POST" action="#">
                         <input type="text" name="query" placeholder="Search" title="Enter search keyword" />
                         <button type="submit" title="Search"><i className="bi bi-search" /></button>
                     </form>
-                </div>{/* End Search Bar */}
+                </div>
                 <nav className="header-nav ms-auto">
                     <ul className="d-flex align-items-center">
                         <li className="nav-item d-block d-lg-none">
                             <a className="nav-link nav-icon search-bar-toggle " href="#">
                                 <i className="bi bi-search" />
                             </a>
-                        </li>{/* End Search Icon*/}
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                                 <i className="bi bi-bell" />
                                 <span className="badge bg-primary badge-number">4</span>
-                            </a>{/* End Notification Icon */}
+                            </a>
                             <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
                                 <li className="dropdown-header">
                                     You have 4 new notifications
@@ -85,13 +86,13 @@ function Header() {
                                 <li className="dropdown-footer">
                                     <a href="#">Show all notifications</a>
                                 </li>
-                            </ul>{/* End Notification Dropdown Items */}
-                        </li>{/* End Notification Nav */}
+                            </ul>
+                        </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
                                 <i className="bi bi-chat-left-text" />
                                 <span className="badge bg-success badge-number">3</span>
-                            </a>{/* End Messages Icon */}
+                            </a>
                             <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
                                 <li className="dropdown-header">
                                     You have 3 new messages
@@ -102,7 +103,7 @@ function Header() {
                                 </li>
                                 <li className="message-item">
                                     <a href="#">
-                                        <img src="assets/img/messages-1.jpg" alt="true" className="rounded-circle" />
+                                        <img src="../assets/img/messages-1.jpg" alt="true" className="rounded-circle" />
                                         <div>
                                             <h4>Maria Hudson</h4>
                                             <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -115,7 +116,7 @@ function Header() {
                                 </li>
                                 <li className="message-item">
                                     <a href="#">
-                                        <img src="assets/img/messages-2.jpg" alt="true" className="rounded-circle" />
+                                        <img src="../assets/img/messages-2.jpg" alt="true" className="rounded-circle" />
                                         <div>
                                             <h4>Anna Nelson</h4>
                                             <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -128,7 +129,7 @@ function Header() {
                                 </li>
                                 <li className="message-item">
                                     <a href="#">
-                                        <img src="assets/img/messages-3.jpg" alt="true" className="rounded-circle" />
+                                        <img src="../assets/img/messages-3.jpg" alt="true" className="rounded-circle" />
                                         <div>
                                             <h4>David Muldon</h4>
                                             <p>Velit asperiores et ducimus soluta repudiandae labore officia est ut...</p>
@@ -142,13 +143,13 @@ function Header() {
                                 <li className="dropdown-footer">
                                     <a href="#">Show all messages</a>
                                 </li>
-                            </ul>{/* End Messages Dropdown Items */}
-                        </li>{/* End Messages Nav */}
+                            </ul>
+                        </li>
                         <li className="nav-item dropdown pe-3">
                             <a className="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-                                <img src="assets/img/profile-img.jpg" alt="Profile" className="rounded-circle" />
+                                <img src="../assets/img/profile-img.jpg" alt="Profile" className="rounded-circle" />
                                 <span className="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-                            </a>{/* End Profile Iamge Icon */}
+                            </a>
                             <ul className="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                                 <li className="dropdown-header">
                                     <h6>Kevin Anderson</h6>
@@ -190,10 +191,10 @@ function Header() {
                                         <span>Sign Out</span>
                                     </Link>
                                 </li>
-                            </ul>{/* End Profile Dropdown Items */}
-                        </li>{/* End Profile Nav */}
+                            </ul>
+                        </li>
                     </ul>
-                </nav>{/* End Icons Navigation */}
+                </nav>
             </header>
         </>
     );

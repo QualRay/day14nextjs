@@ -11,28 +11,46 @@ import './globals.css';
 
 import Script from 'next/script';
 
-import { Inter } from 'next/font/google';
 import Head from 'next/head';
 
+//👇 Import Open Sans font
+import { Open_Sans, Poppins, Nunito } from 'next/font/google'
 
+//👇 Configure our font object
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700']
+})
 
+const poppins = Poppins({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700']
+})
 
-const inter = Inter({ subsets: ['latin'] })
+const nunito = Nunito({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['300', '400', '500', '600', '700']
+})
+
 
 export const metadata = {
-  title: 'Dashboard - NiceAdmin Bootstrap',
+  title: 'Dashboard App',
   description: '',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" >
       <Head>
         <Script type="text/javascript" src="../public/assets/js/main.js" />
       </Head>
-      <body className={inter.className}>
+      <body className={`${openSans.className} ${poppins.className} ${nunito.className}`}>
         {children}
 
+        
         
       </body>
     </html>
