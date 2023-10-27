@@ -144,12 +144,13 @@ export default function page() {
                 <div className="col-lg-12">
                     <div className="card">
                         <div className="card-body">
-                            <h5 className="card-title">Databale</h5>
                             <DataTable
+                                title="Purchase In Progress"
                                 columns={columns}
                                 data={data}
                                 pagination
                                 defaultSortFieldId={1}
+
                             />
                         </div>
                     </div>

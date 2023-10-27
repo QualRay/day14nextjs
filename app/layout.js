@@ -6,12 +6,15 @@ import '../public/assets/vendor/quill/quill.snow.css';
 import '../public/assets/vendor/quill/quill.bubble.css';
 import '../public/assets/vendor/remixicon/remixicon.css';
 import '../public/assets/vendor/simple-datatables/style.css';
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
 import '../public/assets/css/style.css';
 import './globals.css';
 
 import Script from 'next/script';
 
 import Head from 'next/head';
+
+import { PrimeReactProvider } from 'primereact/api';
 
 //👇 Import Open Sans font
 import { Open_Sans, Poppins, Nunito } from 'next/font/google'
@@ -43,16 +46,19 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" >
-      <Head>
-        <Script type="text/javascript" src="../public/assets/js/main.js" />
-      </Head>
-      <body className={`${openSans.className} ${poppins.className} ${nunito.className}`}>
-        {children}
+    <PrimeReactProvider>
 
-        
-        
-      </body>
-    </html>
+      <html lang="en" >
+        <Head>
+          <Script type="text/javascript" src="../public/assets/js/main.js" />
+        </Head>
+        <body className={`${openSans.className} ${poppins.className} ${nunito.className}`}>
+          {children}
+
+
+
+        </body>
+      </html>
+    </PrimeReactProvider>
   )
 }
